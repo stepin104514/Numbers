@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "number_operations.h"
 int main()
 {
     int option,result;
