@@ -1,15 +1,13 @@
-#include <stdio.h>
-#include <math.h>
+#include<stdio.h>
 #include "number_operations.h"
-
 
 int main()
 {
-    int num1=10;
-    int num2=2;
-    int result=find_remainder(num1,num2);
+    int num1=153;
+    int num2=8;
+    int result=is_armstrong(num1);
     printf("%d",result);
-    result=find_sum_of_natural_nos(num2);
+    result=is_power_of_two(num2);
     printf("%d",result);
     return 0;
 }
@@ -125,18 +123,12 @@ int is_armstrong(int num)
         return -1;
     }
     int copy=num;
-    int digit,sum=0,count=0;
-    while(num!=0)
-    {
-        count++;
-        num=num/=10;
-        
-    }
+    int digit,sum=0;
     num=copy;
     while(num!=0)
     {
         digit=num%10;
-        sum+=pow(digit,count);
+        sum+=digit*digit*digit;
         num=num/10;
     }
     if(sum==copy)
@@ -200,17 +192,29 @@ int is_palindrome(int num)
 }
 int is_power_of_two(int num)
 { 
-   if(num<=0) 
-    return -1; 
+    if(num<=0) 
+        return -1; 
   
-   if (ceil(log2(num)) == floor(log2(num)))
-   {
-       return 1;
-   } 
-   else
-   {
-       return 0;
-   }
+    int tempNum=num,flag=0;
+    
+    /*check power of two*/
+    while(tempNum!=1)
+    {
+        if(tempNum%2!=0){
+            flag=1;
+            break;
+        }
+        tempNum=tempNum/2;
+    }
+    if(flag==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
    
 } 
 int find_remainder(int num1,int num2)
