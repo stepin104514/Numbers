@@ -4,7 +4,7 @@ int main()
 {
     int option,result;
     int num1=10,num2=20;
-    inti;
+    int i;
     
     printf("Choose option\n1.To find whether number is positive\n2.To find whether number is negative");
     printf("\n3.To find whether number is odd\n4.To find whether number is even\n5.To find whether number is prime");
