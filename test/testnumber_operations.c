@@ -59,5 +59,5 @@ void test_prime(void)
 {CU_ASSERT(1 == is_prime(5));
   
   
-  CU_ASSERT(-1 == is_prime(0));)
+  CU_ASSERT(-1 == is_prime(0));
 }
