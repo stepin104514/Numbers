@@ -15,7 +15,7 @@ int main()
         printf("False");
         break;
         case -1:
-        print("Not applicable");
+        printf("Not applicable");
         break;
     }
     return 0;
