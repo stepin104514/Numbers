@@ -53,7 +53,7 @@ void test_even(void) {
   CU_ASSERT(0 == is_even(3));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == is_even(12));
+  CU_ASSERT(0 == is_even(12));
 }
 void test_prime(void)
 {CU_ASSERT(1 == is_prime(5));
