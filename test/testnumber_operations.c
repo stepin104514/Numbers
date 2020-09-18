@@ -3,7 +3,7 @@
 
 /* Modify these two lines according to the project */
 #include <number_operations.h>
-#define PROJECT_NAME    "number_operaions"
+#define PROJECT_NAME    "number_operations"
 
 /* Prototypes for all the test functions */
 void test_not_even(void);
