@@ -5,9 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-name: install math library
 
-       run:  sudo apt-get install -y libmath-libm-perl 
 jobs:
   build:
 
