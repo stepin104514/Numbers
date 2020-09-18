@@ -116,7 +116,7 @@ void test_divisible(void){
 	CU_ASSERT(1 == is_divisible_by(5,5));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == is_divisible_by(5,10));
+  CU_ASSERT(0 == is_divisible_by(5,10));
 	
 }
 
