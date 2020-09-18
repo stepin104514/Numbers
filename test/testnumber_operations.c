@@ -170,9 +170,9 @@ void test_remainder(void){
   CU_ASSERT(1 == find_remainder(25,12));
 }
 void test_sum_nat(void){
-	CU_ASSERT(3 == int find_sum_of_natural_nos(2));
+	CU_ASSERT(3 == find_sum_of_natural_nos(2));
   
   /* Dummy fail*/
-  CU_ASSERT(1 == int find_sum_of_natural_nos(1));
+  CU_ASSERT(1 == find_sum_of_natural_nos(1));
 }
 	
