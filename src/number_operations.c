@@ -71,7 +71,7 @@ int calculate_sum_of_digits(int num)
 
 int is_prime(int num)
 {
-    if(num<0)
+    if(num<=0)
     {
         return -1;
     }
