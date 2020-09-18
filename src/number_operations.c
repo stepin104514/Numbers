@@ -168,7 +168,7 @@ int is_palindrome(int num)
     {
         return -1;
     }
-    int temp=num,remainder,reverse_num;
+    int temp=num,remainder,reverse_num=0;
     while(temp!=0)
     {
       remainder=temp%10;
