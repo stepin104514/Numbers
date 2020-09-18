@@ -1,15 +1,15 @@
 # Name of the project
-PROJECT_NAME = even
+PROJECT_NAME = numbers
 
 # Output directory
 BUILD = build
 
 # All source code files
 SRC = main.c\
-src/numberoperations.c\
+src/number_operations.c\
 
 # All test source files
-TEST_SRC = src/numberoperations.c\
+TEST_SRC = src/number_operations.c\
 test/testoperations.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
@@ -25,7 +25,8 @@ $(PROJECT_NAME):all
 # Run the target even if the matching name exists
 .PHONY: run clean test  doc all
 
- all: $(SRC) $(BUILD)	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out -lm 
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
