@@ -3,11 +3,12 @@
 
 /* Modify these two lines according to the project */
 #include <number_operations.h>
-#define PROJECT_NAME    "number_operations"
+#define PROJECT_NAME    "number_operaions"
 
 /* Prototypes for all the test functions */
-void test_not_even(void);
+void test_palindrome(void);
 void test_even(void);
+void test_prime(void);
 
 /* Start of the application test */
 int main() {
@@ -20,8 +21,9 @@ int main() {
   
   
   /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "not even", test_not_even);
-  CU_add_test(suite, "prime", test_even);
+  CU_add_test(suite, "not even", test_palindrome);
+  CU_add_test(suite, "even", test_even);
+  CU_add_test(suite, "prime", test_prime);
   
 
 
@@ -39,17 +41,23 @@ int main() {
 }
 
 /* Write all the test functions */ 
-void test_not_even(void) {
+void test_palindrome(void) {
   
-  CU_ASSERT(1 == is_even(55));
+  CU_ASSERT(1 == is_palindrome(515));
   
   /* Dummy fail*/
-  CU_ASSERT(0 == is_even(13));
+  CU_ASSERT(0 == is_palindrome(13));
 }
 
 void test_even(void) {
-  CU_ASSERT(1 == is_even(3));
+  CU_ASSERT(0 == is_even(3));
   
   /* Dummy fail*/
   CU_ASSERT(1 == is_even(12));
+}
+void test_prime(void)
+{CU_ASSERT(1 == is_prime(5));
+  
+  /* Dummy fail*/
+  CU_ASSERT(-1 == is_prime(0));
 }
