@@ -45,7 +45,7 @@ int is_negative(int num)
 }
 int is_divisible_by(int num1,int num2 )
 {
-    if(num1<0||num2<0)
+    if(num1<=0||num2<=0)
     {
         return -1;
     }
